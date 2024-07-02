@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dangerous URL Construction Example</title>
+    
+</head>
+<body>
+    <a id="link" href="#">Go</a>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const url = params.get('url');
+        const safeUrl = new URL(url, window.location.origin);
+        document.getElementById('link').href = safeUrl;
+    </script>
+</body>
+</html>

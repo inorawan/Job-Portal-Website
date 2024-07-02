@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML Example</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        const userContent = '<img src=x onerror=alert("XSS")>';
+        const sanitizedContent = document.createElement('div');
+        sanitizedContent.innerText = userContent;
+        document.getElementById('content').appendChild(sanitizedContent);
+    </script>
+</body>
+</html>
+

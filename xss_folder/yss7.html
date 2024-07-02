@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline Script XSS</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+</head>
+<body>
+    <h1>Inline Script XSS Example</h1>
+    <div>
+        <script>alert('XSS!');</script>
+    </div>
+</body>
+</html>

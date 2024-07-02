@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML Example</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        const userContent = '<img src=x onerror=alert("XSS")>';
+        document.getElementById('content').innerHTML = userContent;
+    </script>
+</body>
+</html>

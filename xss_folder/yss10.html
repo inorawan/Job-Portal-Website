@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object XSS</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://example.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+</head>
+<body>
+    <h1>Object XSS Example</h1>
+    <object data="data:text/html,<script>alert('XSS!')</script>"></object>
+</body>
+</html>

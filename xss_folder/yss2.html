@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handler XSS</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+</head>
+<body>
+    <h1>Event Handler XSS Example</h1>
+    <form action="" method="get">
+        <label for="input">Enter something:</label>
+        <input type="text" id="input" name="input" onfocus="alert('XSS!')">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

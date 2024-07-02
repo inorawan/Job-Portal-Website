@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline Event Handlers Example</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+</head>
+<body>
+    <button id="safeButton">Click me</button>
+    <script>
+        document.getElementById('safeButton').addEventListener('click', function() {
+            alert('Safe click');
+        });
+    </script>
+</body>
+</html>
