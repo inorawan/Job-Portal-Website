@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reflected XSS Example</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <div id="results"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const search = params.get('q');
+        document.getElementById('results').innerHTML = `Results for: ${search}`;
+    </script>
+</body>
+</html>
